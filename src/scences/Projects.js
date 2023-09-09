@@ -32,13 +32,34 @@ const projectVariant = {
 }
 const Project = ({ title }) => {
     const overlayStyles = `absolute h-full w-full opacity-0 hover:opacity-90 transition duration-500
-    bg-grey z-30 flex flex-col justify-center items-center text-center p-16 text-deep-blue`;
-    console.log(title)
+    bg-grey z-30 flex flex-col justify-center items-center text-center p-16`;
     //separed project title (Project 1 => project-1)
+    const signNum = title.split(" ")[1];
     const projectTitle = title.split(" ").join('-').toLowerCase();
-    const logoNumber = logo1;
+    let logoNum;
+    switch (signNum) {
+        case "2":
+            logoNum = logo2
+            break;
+        case "3":
+            logoNum = logo3
+            break;
+        case "4":
+            logoNum = logo4
+            break;
+        case "5":
+            logoNum = logo5
+            break;
+        case "6":
+            logoNum = logo6
+            break;
+        case "7":
+            logoNum = logo7
+            break;
+        default: logoNum = logo1
+    }
     return (<motion.div variants={projectVariant} className='relative'>
-        <div className={overlayStyles}>
+        <div className={`${overlayStyles} text-violet-800`}>
             <p className='text-2xl font-playfair'>{title}</p>
         </div>
         <p className='mt-7'>
@@ -46,7 +67,7 @@ const Project = ({ title }) => {
             porttitor accumsan tincidunt.
         </p>
 
-        <img alt={`${projectTitle}`} src={window.location.origin + "./assets/project-1.jpeg"} />
+        <img alt={`${projectTitle}`} src={logoNum} />
     </motion.div>
     )
 }
@@ -55,7 +76,7 @@ const Projects = () => {
         <section id='projects' className='pt-48 pb-48'>
             {/**/}
             <motion.div
-                className='md:w-2/4 mx-auto text-center'
+                className='md:w-2/5 mx-auto text-center'
                 initial='hidden'
                 whileInView={"visible"}
                 viewport={{ once: true, amount: 0.5 }}
@@ -70,14 +91,14 @@ const Projects = () => {
                 }}
             >
                 <div>
-                    <p className='font-playfair font-semibold text-4xl mb-5'>
+                    <p className='font-playfair font-semibold text-4xl mb-7'>
                         <span className='text-red'>PRO</span>JECTS
                     </p>
                     <div className='flex mx-auto justify-center'>
-                        <LineGradient width='w-1/3' />
+                        <LineGradient width='w-2/3' />
                     </div>
                 </div>
-                <p className='mt-10 mb-7'>
+                <p className='mt-10 mb-10'>
                     Adipiscing arcu, in aliquam fringilla cursus. Elit arcu elementum
                     viverra malesuada sem ac faucibus dolor. Sagittis scelerisque.
                 </p>
@@ -100,7 +121,7 @@ const Projects = () => {
                 >
                     <div
                         className="flex justify-center text-center items-center p-10 bg-red
-              max-w-[400px] max-h-[400px] text-2xl font-playfair font-semibold"
+              max-w-[400px] max-h-[400px] text-2xl font-playfair font-semibold mt-12"
                     >
                         BEAUTIFUL USER INTERFACES
                     </div>
@@ -115,8 +136,8 @@ const Projects = () => {
                     {/* ROW 3 */}
                     <Project title="Project 6" />
                     <Project title="Project 7" />
-                    <div className='flex justify-center text-center items-center p-10 bg-red 
-                    max-w-[400px] max-h-[400px] text-2xl font-playfair font-semibold'>
+                    <div className='flex justify-center text-center items-center p-10 bg-blue 
+                    max-w-[400px] max-h-[400px] text-2xl font-playfair font-semibold mt-12'>
                         SMOOTH USER EXPERIENCE
                     </div>
                 </motion.div>

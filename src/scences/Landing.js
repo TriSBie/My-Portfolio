@@ -19,12 +19,12 @@ const Landing = ({ setSelectedPage }) => {
                 {isAboveMediumScreens ?
                     (<div
                         className="relative z-0 ml-20 before:absolute before:-top-20 before:-left-20 before:rounded-t-[400px]
-            before:w-full before:max-w-[250px] md:before:max-w-[400px] before:h-full before:border-2 before:border-blue before:z-[-1] brightness-125"
+            before:w-full before:max-w-[250px] md:before:max-w-[400px] before:h-full before:border-2 before:border-blue before:z-[-1] "
                     >
                         <img
                             src={`https://scontent.fsgn5-8.fna.fbcdn.net/v/t39.30808-6/365855158_1365034527695875_2854577043959998196_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=a2f6c7&_nc_ohc=Ape-k0_2U6AAX8Lsn9A&_nc_ht=scontent.fsgn5-8.fna&oh=00_AfCEK7BBVvNPfUHEVf27ucgqyEvThR35W4FZbX5xFEeNmw&oe=64FBBDAB`}
                             alt="profile"
-                            className="hover:filter hover:saturate-200 transition duration-500 z-10 w-full max-w-[300px] md:max-w-[430px] rounded-t-[400px]"
+                            className="hover:filter hover:saturate-200 transition duration-500 z-10 w-full max-w-[300px] md:max-w-[430px] rounded-t-[400px] backdrop-brightness-200"
                         />
                     </div>) :
                     (<img
@@ -52,12 +52,12 @@ const Landing = ({ setSelectedPage }) => {
                     }}
                 >
                     <p className='text-6xl font-playfair z-10 text-center md:text-start'>
-                        Jane {""}
+                        Tri {""}
                         <span
                             className='xs:relative xs:text-deep-blue xs:font-semibold z-20 
                                 xs:before:content-brush before:absolute before:-left-[25px] before:-top-[75px] 
                                 before:z-[-1]'>
-                            Esper
+                            Bui
                         </span>
                     </p>
                     <p className='mt-10 mb-7 text-sm wtext-center md:text-start'>
